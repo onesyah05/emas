@@ -57,6 +57,7 @@ var hasil =[];
             console.log(hasil)
             let data = JSON.stringify(current, null, 2);
             fs.writeFileSync('data.json', data);
+
         
         })
 })
@@ -64,7 +65,7 @@ var hasil =[];
 app.use(enableCrossDomain);
 app.get('/',(req,res)=>{
     res.send({
-        data: jsonData
+        data: current
     })
 })
 
