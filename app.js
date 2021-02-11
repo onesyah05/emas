@@ -31,7 +31,7 @@ var hasil =[];
             }else{
                 var type = "perak";
             }
-            current.push({date:moment().format("DD-MM-YYYY hh::mm:ss"),type:type,current_price:v.replace('Harga/gram ','')})
+            current.push({date:moment().format("DD-MM-YYYY hh:mm:ss"),type:type,current_price:v.replace('Harga/gram ','')})
         });
         
         scraperjs.StaticScraper.create('https://www.logammulia.com/id')
@@ -54,20 +54,21 @@ var hasil =[];
                 }
                 
             });
-            console.log(hasil)
-            let data = JSON.stringify(current, null, 2);
-            fs.writeFileSync('data.json', data);
+            app.get('/',(req,res)=>{
+                res.send({
+                    data: current
+                })
+            })
+            // let data = JSON.stringify(current, null, 2);
+            // fs.writeFileSync('data.json', data);
 
         
         })
 })
 
 app.use(enableCrossDomain);
-app.get('/',(req,res)=>{
-    res.send({
-        data: current
-    })
-})
+console.log(current)
+
 
 app.listen(port, () => {
     console.log(`app listening at http://localhost:${port}`)

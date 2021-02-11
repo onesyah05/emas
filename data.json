@@ -1,14 +1,14 @@
 [
   {
-    "date": "09-02-2021 04::00:28",
+    "date": "11-02-2021 08::34:29",
     "type": "emas",
-    "current_price": "Rp943.000,00",
-    "last_price": "Rp940.000,00"
+    "current_price": "Rp945.000,00",
+    "last_price": "Rp945.000,00"
   },
   {
-    "date": "09-02-2021 04::00:28",
+    "date": "11-02-2021 08::34:29",
     "type": "perak",
-    "current_price": "Rp13.100,00",
-    "last_price": "Rp13.200,00"
+    "current_price": "Rp12.900,00",
+    "last_price": "Rp13.100,00"
   }
 ]
